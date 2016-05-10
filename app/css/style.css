@@ -1,0 +1,16 @@
+.chart {
+  text-align: center;
+}
+polygon.radar-chart-serie {
+  stroke: #EF4658;
+  fill: #EF4658;
+  stroke-width: 2px;
+  fill-opacity: 0.6;
+}
+circle.radar-chart-serie {
+  fill : #EF4658;
+}
+line.radar-chart-serie {
+  stroke: #EF4658;
+  stroke-width: 2px;
+}
