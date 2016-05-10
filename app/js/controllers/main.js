@@ -22,7 +22,7 @@ angular.module('lsdMorphingLogoApp')
     var getRandomValue = function() {
       var minValue = 1;
       var maxValue = 5;
-      return Math.floor((Math.random() * maxValue) + minValue);
+      return (Math.random() * maxValue) + minValue;
     }
     $interval(function() {
       $scope.chartData = [
