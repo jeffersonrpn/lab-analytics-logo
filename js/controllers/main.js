@@ -20,7 +20,7 @@ angular.module('lsdMorphingLogoApp')
 		  ]
 		];
     var getRandomValue = function() {
-      var minValue = 0;
+      var minValue = .5;
       var maxValue = 5;
       return (Math.random() * maxValue) + minValue;
     }
@@ -30,14 +30,14 @@ angular.module('lsdMorphingLogoApp')
     			{axis:"N",		value: getRandomValue()},
     			{axis:"NO1",	value: getRandomValue()},
     			{axis:"NO2",	value: getRandomValue()},
-    			{axis:"O",		value: getRandomValue()},
-    			{axis:"SO1",	value: getRandomValue()},
-    			{axis:"SO2",	value: getRandomValue()},
-    			{axis:"S1",		value: getRandomValue()},
-    			{axis:"S2", 	value: getRandomValue()},
-    			{axis:"SE1",	value: getRandomValue()},
-    			{axis:"SE2",	value: getRandomValue()},
-    			{axis:"E",		value: getRandomValue()},
+    			{axis:"O",		value: 0},
+    			{axis:"SO1",	value: 0},
+    			{axis:"SO2",	value: 0},
+    			{axis:"S1",		value: 0},
+    			{axis:"S2", 	value: 0},
+    			{axis:"SE1",	value: 0},
+    			{axis:"SE2",	value: 0},
+    			{axis:"E",		value: 0},
     			{axis:"NE1",	value: getRandomValue()},
     			{axis:"NE2",	value: getRandomValue()}
   		  ]
