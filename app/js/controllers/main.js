@@ -20,7 +20,7 @@ angular.module('lsdMorphingLogoApp')
 		  ]
 		];
     var getRandomValue = function() {
-      var minValue = 1;
+      var minValue = 0;
       var maxValue = 5;
       return (Math.random() * maxValue) + minValue;
     }
@@ -42,5 +42,5 @@ angular.module('lsdMorphingLogoApp')
     			{axis:"NE2",	value: getRandomValue()}
   		  ]
   		];
-    }, 1000);
+    }, 2000);
   }]);

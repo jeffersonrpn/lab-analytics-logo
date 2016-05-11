@@ -2,16 +2,17 @@
   margin-top: 100px;
   text-align: center;
 }
-polygon.radar-chart-serie {
+polygon.chart-elem {
   stroke: #EF4658;
   fill: #EF4658;
   stroke-width: 2px;
   fill-opacity: 0.6;
 }
-circle.radar-chart-serie {
+circle.chart-elem,
+path.chart-elem {
   fill : #EF4658;
 }
-line.radar-chart-serie {
+line.chart-elem {
   stroke: #EF4658;
   stroke-width: 2px;
 }
