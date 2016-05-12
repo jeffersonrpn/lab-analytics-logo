@@ -13,12 +13,21 @@
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
   </head>
-  <body ng-app="labAnalyticsLogoApp" ng-controller="MainCtrl">
+  <body ng-app="labAnalyticsLogoApp" ng-controller="MainCtrl as chart">
     <!--[if lte IE 8]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <div lsd-chart chart-data="chartData" class="chart"></div>
+    <div id="logo" lsd-chart chart-data="chart.chartData" class="chart"></div>
+
+    <div class="wrap">
+      <div class="row">
+        <div class="col-xs-6"></div>
+        <div class="col-xs-6">
+          <button class="btn btn-primary btn-block" ng-click="chart.copy()">Copy</button>
+        </div>
+      </div>
+    </div>
 
     <!-- Google Analytics -->
      <script>

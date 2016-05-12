@@ -8,8 +8,9 @@
  * Controller of the labAnalyticsLogoApp
  */
 angular.module('labAnalyticsLogoApp')
-  .controller('MainCtrl', ['$scope', '$interval', function ($scope, $interval) {
-    $scope.chartData = [
+  .controller('MainCtrl', ['$interval', function ($interval) {
+    var vm = this;
+    vm.chartData = [
 		  [
   			{axis:"N",		value: 5},
   			{axis:"NO1",	value: 1.2},
@@ -26,13 +27,18 @@ angular.module('labAnalyticsLogoApp')
   			{axis:"NE2",	value: 2.5}
 		  ]
 		];
+    vm.copy = function() {
+      console.log('Copy!');
+      console.log((angular.element('#logo').html()));
+    };
+
     var getRandomValue = function() {
       var minValue = 0.5;
       var maxValue = 5;
       return (Math.random() * maxValue) + minValue;
     };
     $interval(function() {
-      $scope.chartData = [
+      vm.chartData = [
   		  [
     			{axis:"N",		value: getRandomValue()},
     			{axis:"NO1",	value: getRandomValue()},
