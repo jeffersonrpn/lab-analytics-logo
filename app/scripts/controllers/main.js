@@ -34,6 +34,7 @@ angular.module('labAnalyticsLogoApp')
       vm.svg = angular.element('#logo').html();
     };
     vm.download = function() {
+      vm.copy();
       var data = new Blob([vm.svg], { type: 'text/plain;charset=utf-8' });
       FileSaver.saveAs(data, 'labanalytics.svg');
     };
@@ -63,8 +64,8 @@ angular.module('labAnalyticsLogoApp')
       vm.copy();
     };
     vm.backToDefault = function() {
-      console.log(defaultChart);
       vm.chartData = defaultChart;
+      vm.copy();
     };
     var randomRepeat = $interval(vm.hitme, 2000);
     var getRandomValue = function() {
