@@ -12,24 +12,24 @@ angular.module('labAnalyticsLogoApp')
     var vm = this;
     vm.chartData = [
 		  [
-  			{axis:"N",		value: 5},
-  			{axis:"NO1",	value: 1.2},
-  			{axis:"NO2",	value: 4},
-  			{axis:"O",		value: 0},
-  			{axis:"SO1",	value: 0},
-  			{axis:"SO2",	value: 0},
-  			{axis:"S1",		value: 0},
-  			{axis:"S2", 	value: 0},
-  			{axis:"SE1",	value: 0},
-  			{axis:"SE2",	value: 0},
-  			{axis:"E",		value: 0},
-  			{axis:"NE1",	value: 1},
-  			{axis:"NE2",	value: 2.5}
+  			{axis:'N',		value: 5},
+  			{axis:'NO1',	value: 1.2},
+  			{axis:'NO2',	value: 4},
+  			{axis:'O',		value: 0},
+  			{axis:'SO1',	value: 0},
+  			{axis:'SO2',	value: 0},
+  			{axis:'S1',		value: 0},
+  			{axis:'S2', 	value: 0},
+  			{axis:'SE1',	value: 0},
+  			{axis:'SE2',	value: 0},
+  			{axis:'E',		value: 0},
+  			{axis:'NE1',	value: 1},
+  			{axis:'NE2',	value: 2.5}
 		  ]
 		];
+    vm.svg = '';
     vm.copy = function() {
-      console.log('Copy!');
-      console.log((angular.element('#logo').html()));
+      vm.svg = angular.element('#logo').html();
     };
 
     var getRandomValue = function() {
@@ -40,20 +40,21 @@ angular.module('labAnalyticsLogoApp')
     $interval(function() {
       vm.chartData = [
   		  [
-    			{axis:"N",		value: getRandomValue()},
-    			{axis:"NO1",	value: getRandomValue()},
-    			{axis:"NO2",	value: getRandomValue()},
-    			{axis:"O",		value: 0},
-    			{axis:"SO1",	value: 0},
-    			{axis:"SO2",	value: 0},
-    			{axis:"S1",		value: 0},
-    			{axis:"S2", 	value: 0},
-    			{axis:"SE1",	value: 0},
-    			{axis:"SE2",	value: 0},
-    			{axis:"E",		value: 0},
-    			{axis:"NE1",	value: getRandomValue()},
-    			{axis:"NE2",	value: getRandomValue()}
+    			{axis:'N',		value: getRandomValue()},
+    			{axis:'NO1',	value: getRandomValue()},
+    			{axis:'NO2',	value: getRandomValue()},
+    			{axis:'O',		value: 0},
+    			{axis:'SO1',	value: 0},
+    			{axis:'SO2',	value: 0},
+    			{axis:'S1',		value: 0},
+    			{axis:'S2', 	value: 0},
+    			{axis:'SE1',	value: 0},
+    			{axis:'SE2',	value: 0},
+    			{axis:'E',		value: 0},
+    			{axis:'NE1',	value: getRandomValue()},
+    			{axis:'NE2',	value: getRandomValue()}
   		  ]
   		];
+      vm.copy();
     }, 2000);
   }]);
