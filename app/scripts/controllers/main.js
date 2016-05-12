@@ -8,7 +8,7 @@
  * Controller of the labAnalyticsLogoApp
  */
 angular.module('labAnalyticsLogoApp')
-  .controller('MainCtrl', ['$interval', function ($interval) {
+  .controller('MainCtrl', ['$interval', 'FileSaver', 'Blob', function ($interval, FileSaver, Blob) {
     var vm = this;
     vm.chartData = [
 		  [
@@ -31,7 +31,10 @@ angular.module('labAnalyticsLogoApp')
     vm.copy = function() {
       vm.svg = angular.element('#logo').html();
     };
-
+    vm.download = function() {
+      var data = new Blob([vm.svg], { type: 'text/plain;charset=utf-8' });
+      FileSaver.saveAs(data, 'labanalytics.svg');
+    };
     var getRandomValue = function() {
       var minValue = 0.5;
       var maxValue = 5;
@@ -56,5 +59,5 @@ angular.module('labAnalyticsLogoApp')
   		  ]
   		];
       vm.copy();
-    }, 2000);
+    }, 2000, 0);
   }]);

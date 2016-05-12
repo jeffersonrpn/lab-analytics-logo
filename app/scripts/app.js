@@ -9,4 +9,4 @@
  * Main module of the application.
  */
 angular
-  .module('labAnalyticsLogoApp', ['ngclipboard']);
+  .module('labAnalyticsLogoApp', ['ngclipboard', 'ngFileSaver']);
