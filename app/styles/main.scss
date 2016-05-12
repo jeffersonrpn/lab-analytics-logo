@@ -1,0 +1,23 @@
+$icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
+// bower:scss
+@import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
+// endbower
+
+.chart {
+  margin-top: 100px;
+  text-align: center;
+}
+polygon.chart-elem {
+  stroke: #EF4658;
+  fill: #FFFFFF;
+  stroke-width: 2px;
+  fill-opacity: 0.6;
+}
+circle.chart-elem,
+path.chart-elem {
+  fill : #EF4658;
+}
+line.chart-elem {
+  stroke: #EF4658;
+  stroke-width: 2px;
+}

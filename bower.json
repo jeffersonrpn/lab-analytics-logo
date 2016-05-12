@@ -1,28 +1,23 @@
 {
-  "name": "lsdmorphinglogo",
-  "description": "Mighty morphin power logo!",
-  "main": "app/index.html",
-  "authors": [
-    "Jefferson Neves <jefferson.rpn@gmail.com>"
-  ],
-  "license": "MIT",
-  "keywords": [
-    "lsd",
-    "logo"
-  ],
-  "homepage": "https://github.com/jeffersonrpn/lsd-morphing-logo",
-  "private": true,
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components",
-    "app/vendor",
-    "test",
-    "tests"
-  ],
+  "name": "lab-analytics-logo",
+  "version": "0.0.0",
   "dependencies": {
-    "bootstrap": "3.3.6",
-    "d3": "^3.5.17",
-    "angular": "1.5.5"
+    "angular": "^1.4.0",
+    "bootstrap-sass-official": "^3.2.0",
+    "d3": "^3.5.17"
+  },
+  "devDependencies": {
+    "angular-mocks": "^1.4.0"
+  },
+  "appPath": "app",
+  "moduleName": "labAnalyticsLogoApp",
+  "overrides": {
+    "bootstrap": {
+      "main": [
+        "less/bootstrap.less",
+        "dist/css/bootstrap.css",
+        "dist/js/bootstrap.js"
+      ]
+    }
   }
 }
