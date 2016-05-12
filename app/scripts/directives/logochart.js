@@ -14,18 +14,20 @@ angular.module('labAnalyticsLogoApp')
             var svg = d3.select(rawSvg[0]);
             var cfg = {
               radius: 5,
-              w: 400,
-              h: 400,
+              w: 320,
+              h: 320,
               factor: 1,
               levels: 3,
               maxValue: 0,
               radians: 2 * Math.PI,
               opacityArea: 0.3,
               ToRight: 5,
-              TranslateX: 80,
-              TranslateY: 30,
-              ExtraWidthX: 200,
-              ExtraWidthY: 200
+              TranslateX: 23,
+              TranslateY: 20,
+              TranslateLogotypeX: 50,
+              TranslateLogotypeY: 40,
+              ExtraWidthX: 45,
+              ExtraWidthY: 45
             };
             var allAxis = (data[0].map(function(i){return i.axis;}));
             var total = allAxis.length;
@@ -149,7 +151,7 @@ angular.module('labAnalyticsLogoApp')
               var logotype = d3.select(rawSvg[0])
                 .append('g')
                 .attr('id', 'logotype')
-                .attr('transform', 'scale(0.3, 0.3) translate(375, 208)');
+                .attr('transform', 'scale(0.3, 0.3) translate('+cfg.TranslateLogotypeX+', '+cfg.TranslateLogotypeY+')');
               logotype.append('path')
                 .attr('id', 'Lab-analytics-1')
                 .attr('class', 'chart-elem')
