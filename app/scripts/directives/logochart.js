@@ -25,7 +25,7 @@ angular.module('labAnalyticsLogoApp')
               TranslateX: 22.5,
               TranslateY: 22,
               TranslateLogotypeX: 50,
-              TranslateLogotypeY: 100,
+              TranslateLogotypeY: 40,
               ExtraWidthX: 45,
               ExtraWidthY: 45,
               color: '#EF4658',

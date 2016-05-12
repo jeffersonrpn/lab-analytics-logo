@@ -1,5 +1,6 @@
 $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
 // bower:scss
+@import "_customVariables";
 @import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
 // endbower
 
@@ -10,4 +11,11 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 .wrap {
   width: 320px;
   margin: auto;
+}
+.btn {
+  border-width: 2px;
+  font-weight: bold;
+}
+.btn-group > .btn-group:first-child:not(:last-child) > .btn:last-child, .btn-group > .btn-group:first-child:not(:last-child) > .dropdown-toggle {
+  border-right-width: 0;
 }
