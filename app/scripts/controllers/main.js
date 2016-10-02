@@ -72,7 +72,7 @@ angular.module('labAnalyticsLogoApp')
     var DIFF_MIN_MAX = 4.5;
     var MIN_SIZE = 0.5
     var github_info = {repos : 2.5, commits : 5};
-    var randomRepeat = $interval(vm.hitme, 2000);
+    var randomRepeat = $interval(vm.hitme, 1300);
 
     var generateError = function() {
       return(Math.random()/4 - 0.15);
