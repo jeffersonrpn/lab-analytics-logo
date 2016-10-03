@@ -72,6 +72,7 @@ angular.module('labAnalyticsLogoApp')
     var DIFF_MIN_MAX = 4.5;
     var MIN_SIZE = 0.5
     var github_info = {repos : 2.5, commits : 5};
+    var gotGihubInfo = false;
     var randomRepeat = $interval(vm.hitme, 1300);
 
     var generateError = function() {
@@ -91,10 +92,19 @@ angular.module('labAnalyticsLogoApp')
       return (d.getHours() * 3600 + d.getMinutes() * 60 + d.getSeconds()) / (60 * 60 * 24) * DIFF_MIN_MAX + MIN_SIZE;
     };
     var getGithubDimensions = function(){
-      d3.json("github-activity.json",
-               function(error, data){
+      if(gotGihubInfo){
+        return;
+      }
+      // d3.json("http://analytics.ufcg.edu.br/logo/github-activity.json",
+      //          function(error, data){
+      //            github_info['commits'] = (data['commits'] / 200 * DIFF_MIN_MAX + MIN_SIZE);
+      //            github_info['repos'] = (data['repos'] / 20 * DIFF_MIN_MAX + MIN_SIZE);
+      //          });
+      $.getJSON("https://analytics.ufcg.edu.br/logo/github-activity.json",
+               function(data){
                  github_info['commits'] = (data['commits'] / 200 * DIFF_MIN_MAX + MIN_SIZE);
                  github_info['repos'] = (data['repos'] / 20 * DIFF_MIN_MAX + MIN_SIZE);
+                 gotGihubInfo = true;
                });
     };
     var spareRandom = null;
