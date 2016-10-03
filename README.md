@@ -22,6 +22,12 @@ Install `grunt-cli`, `bower` globally (needs admin privileges):
 npm install -g grunt-cli bower
 ```
 
+For the python part:
+
+```
+pip install --pre github3.py
+```
+
 ## Build & development
 
 This project uses grunt to build, test and run. First, install the dependencies with *npm* and *bower*.
