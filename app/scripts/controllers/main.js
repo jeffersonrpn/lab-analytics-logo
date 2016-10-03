@@ -100,7 +100,7 @@ angular.module('labAnalyticsLogoApp')
       //            github_info['commits'] = (data['commits'] / 200 * DIFF_MIN_MAX + MIN_SIZE);
       //            github_info['repos'] = (data['repos'] / 20 * DIFF_MIN_MAX + MIN_SIZE);
       //          });
-      $.getJSON("https://analytics.ufcg.edu.br/logo/github-activity.json",
+      $.getJSON("https://analytics.lsd.ufcg.edu.br/logo/",
                function(data){
                  github_info['commits'] = (data['commits'] / 200 * DIFF_MIN_MAX + MIN_SIZE);
                  github_info['repos'] = (data['repos'] / 20 * DIFF_MIN_MAX + MIN_SIZE);
