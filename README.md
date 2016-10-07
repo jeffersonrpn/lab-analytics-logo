@@ -30,14 +30,29 @@ pip install --pre github3.py
 
 ## Build & development
 
-This project uses grunt to build, test and run. First, install the dependencies with *npm* and *bower*.
+Primeiro, instale  as dependências do projeto com *npm* and *bower*.
 
 ```
 npm install
 bower install
 ```
+Para gerar a distribuição:
 
-Run `grunt` for building and `grunt serve` for preview.
+```
+grunt build
+```
+
+Para visualizar enquanto desenvolve:
+
+```
+grunt serve
+```
+
+Para realizar deployment no gh-pages:
+
+```
+grunt gh-pages
+```
 
 ## Para pegar as informações do github
 
